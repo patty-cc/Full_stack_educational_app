@@ -1,0 +1,12 @@
+* {
+  margin: 0px;
+  padding:0px;
+}
+
+#main-background-image{
+  background-image: url('./images/jungle.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
