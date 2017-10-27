@@ -3,8 +3,39 @@
   padding:0px;
 }
 
-body{
+body {
   background: url('./images/MoreJungle.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#animal-picture {
+  
+}
+
+#text-box-wrapper {
+  display: flex;
+  background-color: wheat;
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+#boy-explorer {
+  background-color: dodgerblue;
+  height: 100%;
+  flex: 1;
+}
+
+#girl-explorer {
+  background-color: hotpink;
+  height: 100%;
+  flex: 1;
+}
+
+#text-box {
+  background-color: green;
+  height: 100%;
+  flex: 2;
 }
