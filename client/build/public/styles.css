@@ -3,10 +3,8 @@
   padding:0px;
 }
 
-#main-background-image{
-  background-image: url('./images/jungle.jpg');
-  background-position: center;
+body{
+  background: url('./images/MoreJungle.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-
+  background-size: cover;
 }
