@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-
 }
 
 #background-image-wrapper {
@@ -17,9 +16,9 @@ body {
   top: 0;
   width: 100%;
   height: 75%;
-  background-color: tomato;
+  /*background-color: tomato;*/
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 #animal-picture-wrapper {
@@ -52,4 +51,19 @@ body {
   background-color: green;
   height: 100%;
   flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text-box p {
+  padding: 0 10%;
+}
+
+#quiz-journal-box {
+  background: url('./images/journal_quiz.jpg');
+  height: 500px;
+  width: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
