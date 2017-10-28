@@ -1,60 +1,60 @@
-var canvasWidth = 450;
-var canvasHeight = 300;
+// var canvasWidth1 = 450;
+// var canvasHeight1 = 300;
 
-var spriteWidth = 3177;
-var spriteHeight = 486;
+// var spriteWidth1 = 3177;
+// var spriteHeight1 = 486;
 
-var rows = 1;
-var cols = 10;
+// var rows1 = 1;
+// var cols1 = 10;
 
-var trackRight = 0;
+// var trackRight = 0;
+//
+// var trackLeft = 1;
 
-var trackLeft = 1;
+var width1 = 3177/10;
 
-var width = spriteWidth/cols;
+var height1 = 486;
 
-var height = spriteHeight/rows;
+var curFrame1 = 0;
 
-var curFrame = 0;
+var frameCount1 = 10;
 
-var frameCount = 10;
+// var x1=-2;
+// var y1=0;
 
-var x=-2;
-var y=0;
+// var srcX1=0;
+// var srcY1=0;
 
-var srcX=0;
-var srcY=0;
+// var left = false;
+//
+// var right = false;
+//
+// var speed = 10;
 
-var left = false;
+var canvas1 = document.getElementById('explorer1');
 
-var right = false;
+canvas1.width = 450;
+canvas1.height = 300;
 
-var speed = 10;
+var ctx1 = canvas1.getContext("2d");
 
-var canvas = document.getElementById('explorer1');
+var character1 = new Image();
 
-canvas.width = canvasWidth;
-canvas.height = canvasHeight;
+character1.src = "character1fixed.png";
 
-var ctx = canvas.getContext("2d");
+function updateFrame1(){
 
-var character = new Image();
+ curFrame1 = ++curFrame1 % frameCount1;
 
-character.src = "character1fixed.png";
-
-function updateFrame(){
-
- curFrame = ++curFrame % frameCount;
-
- srcX = curFrame * width;
- ctx.clearRect(x,y,width,height);
+ srcX1 = curFrame1 * width1;
+ ctx1.clearRect(-2,0,width1,height1);
 }
 
-function draw(){
+function draw1(){
 
- updateFrame();
+ updateFrame1();
 
- ctx.drawImage(character,srcX,srcY,width,height,x,y,width,height);
+ ctx1.drawImage(character1,srcX1,0,width1,height1,-2,0,width1,height1);
 }
 
-setInterval(draw,180);
+setInterval(draw1,180);
