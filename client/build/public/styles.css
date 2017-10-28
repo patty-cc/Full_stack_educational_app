@@ -41,12 +41,22 @@ body {
   /*background-color: dodgerblue;*/
   height: 100%;
   flex: 1;
+  text-align: center;
+}
+
+#explorer1 {
+  padding-left: 10%;
 }
 
 .girl-explorer {
-  background-color: hotpink;
+  /*background-color: hotpink;*/
   height: 100%;
   flex: 1;
+  text-align: center;
+}
+
+#explorer2 {
+  padding-left: 10%;
 }
 
 #text-box {

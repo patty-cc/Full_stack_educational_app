@@ -1,8 +1,8 @@
 var canvasWidth = 450;
 var canvasHeight = 300;
 
-var spriteWidth = 3177;
-var spriteHeight = 486;
+var spriteWidth = 3084;
+var spriteHeight = 492;
 
 var rows = 1;
 var cols = 10;
@@ -19,7 +19,7 @@ var curFrame = 0;
 
 var frameCount = 10;
 
-var x=-2;
+var x=-15;
 var y=0;
 
 var srcX=0;
@@ -31,7 +31,7 @@ var right = false;
 
 var speed = 10;
 
-var canvas = document.getElementById('explorer1');
+var canvas = document.getElementById('explorer2');
 
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
@@ -40,7 +40,7 @@ var ctx = canvas.getContext("2d");
 
 var character = new Image();
 
-character.src = "character1fixed.png";
+character.src = "character2fixed.png";
 
 function updateFrame(){
 
