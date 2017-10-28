@@ -17,10 +17,13 @@
   },
   "homepage": "https://github.com/patty-cc/Full_stack_educational_app#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongod": "^2.0.0",
     "mongodb": "^2.2.33"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  },
   "description": ""
 }
