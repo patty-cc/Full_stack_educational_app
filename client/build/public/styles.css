@@ -32,9 +32,11 @@ body {
   display: flex;
   background-color: wheat;
   height: 25%;
-  width: 100%;
+  width: 99%;
   position: fixed;
   bottom: 0;
+  border: 10px double black;
+  border-right:10px double black;
 }
 
 .boy-explorer {
