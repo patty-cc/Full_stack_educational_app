@@ -8,20 +8,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  min-width: 1160px;
+  position: fixed;
 
 }
 
 
 #journal-image {
-  /*height: 50%;
-  width:50%;*/
-  background-image: url('./images/journal1.jpg');
+
+  background-image: url('./images/journal.png');
   background-size: contain;
+  background-position: center;
   position: fixed;
 
-  height: 60%;
-  width: 50%;
+  height: 65%;
+  width: 75%;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -38,23 +38,41 @@ body {
   justify-content: center;
   align-items:center;
 
+
 }
 
 #animal-picture-wrapper {
   flex:1;
   position: relative;
-  height: 200px;
-  width: 200px;
   padding-left: 15%;
+  height: 90%;
+  width: 100%;
+}
+
+
+
+#animalImg{
+  position: relative;
+  height: 85%;
+  width: 95%;
+  justify-content: right;
+}
+#name{
+  position: relative;
+  bottom: 100px;
+  text-align: center;
+}
+p {
+  font-family: 'Handlee', cursive;
+  font-size: 25px;
+
 }
 
 #animal-info {
   flex:1 ;
   height:100%;
-  width:200px;
-  font-size: 30px;
-  font-family: 'Handlee', cursive;
-  margin: 10px 0px;
+  width:60%;
+  margin: 10px 10px;
   text-align:left;
 }
 

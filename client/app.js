@@ -3,9 +3,14 @@ var requestHelper = require('./helpers/request_helper.js');
 var renderAnimalsInfo = function(animals, counter) {
   var animalPic = document.getElementById('animalImg')
 
-  animalPic.src = animals[counter].img
-  animalPic.height = '200'
-  animalPic.width = '200'
+  var pictures = ['./public/images/Macaw.png','./public/images/tree-jaguar.png','./public/images/Dart-frog.png']
+
+  animalPic.src = pictures[counter]
+  // animalPic.height = '300'
+  // animalPic.width = '250'
+
+  var nameLabel = document.getElementById('name')
+  nameLabel.innerText = animals[counter].name
 
   var animalType = document.getElementById('animalType');
   var animalTypeText = document.getElementById('animal-type-text')
