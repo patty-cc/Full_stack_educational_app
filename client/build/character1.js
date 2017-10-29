@@ -1,15 +1,3 @@
-// var canvasWidth1 = 450;
-// var canvasHeight1 = 300;
-
-// var spriteWidth1 = 3177;
-// var spriteHeight1 = 486;
-
-// var rows1 = 1;
-// var cols1 = 10;
-
-// var trackRight = 0;
-//
-// var trackLeft = 1;
 
 var width1 = 3177/10;
 
@@ -18,18 +6,6 @@ var height1 = 486;
 var curFrame1 = 0;
 
 var frameCount1 = 10;
-
-// var x1=-2;
-// var y1=0;
-
-// var srcX1=0;
-// var srcY1=0;
-
-// var left = false;
-//
-// var right = false;
-//
-// var speed = 10;
 
 var canvas1 = document.getElementById('explorer1');
 
