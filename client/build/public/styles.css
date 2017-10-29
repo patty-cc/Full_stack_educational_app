@@ -66,8 +66,9 @@ body {
 }
 
 #text-box {
-  background: url('./images/speechBubble.png');
+  background: url('./images/speechBubble3.png');
   object-fit: contain;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: green;
   height: 100%;
@@ -75,7 +76,7 @@ body {
 }
 
 #welcome-text {
-  text-align: center;
+  /*text-align: center;*/
   font-size: 2em;
-  padding: 3% 14%;
+  padding: 4% 15% 3% 25%;
 }
