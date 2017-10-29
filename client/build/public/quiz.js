@@ -64,7 +64,7 @@ var initializeQuiz = function(indexesArray) {
   var answer3Index = answersIndexes[0];
 
 
-// create buttons with 3 questions using the indexes that have just been generated
+// create buttons with 3 questions in random order using the indexes that have just been generated
   var answer1 = document.createElement("button");
   answer1.innerText = jungleSets[index].answers[answer1Index].text;
   answersWrapper.appendChild(answer1);
@@ -77,9 +77,24 @@ var initializeQuiz = function(indexesArray) {
   answer3.innerText = jungleSets[index].answers[answer3Index].text;
   answersWrapper.appendChild(answer3);
 
-  answer1.addEventListener("click", correctAnswerClicked);
-  answer2.addEventListener("click", incorrectAnswerClicked);
-  answer3.addEventListener("click", incorrectAnswerClicked);
+// add appropriate event listeners based on the correctness of the answer
+  if (jungleSets[index].answers[answer1Index].correct){
+    answer1.addEventListener("click", correctAnswerClicked);
+  } else {
+    answer1.addEventListener("click", incorrectAnswerClicked);
+  }
+
+  if (jungleSets[index].answers[answer2Index].correct){
+    answer2.addEventListener("click", correctAnswerClicked);
+  } else {
+    answer2.addEventListener("click", incorrectAnswerClicked);
+  }
+
+  if (jungleSets[index].answers[answer3Index].correct){
+    answer3.addEventListener("click", correctAnswerClicked);
+  } else {
+    answer3.addEventListener("click", incorrectAnswerClicked);
+  }
 }
 
 var displayHomeButton = function(){
