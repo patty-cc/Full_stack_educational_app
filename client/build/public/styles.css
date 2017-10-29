@@ -80,3 +80,9 @@ body {
   font-size: 2em;
   padding: 4% 15% 3% 25%;
 }
+
+#jungle-button {
+  height: 15%;
+  width: 15%;
+  margin-top: 22%;
+}
