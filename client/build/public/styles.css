@@ -16,16 +16,17 @@ body {
 #journal-image {
   /*height: 50%;
   width:50%;*/
-  background-image: url('./images/journal.jpg');
-  background-size: cover;
+  background-image: url('./images/journal1.jpg');
+  background-size: contain;
   position: fixed;
 
-  height: 50%;
+  height: 60%;
   width: 50%;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: fill;
 }
 
 #background-image-wrapper {
@@ -49,18 +50,23 @@ body {
 
 #animal-info {
   flex:1 ;
-  height:200px;
+  height:100%;
   width:200px;
-
-}
-
-#animal-info p{
-  text-align:left;
   font-size: 30px;
-  padding: 0px 50px 0px 20px;
-  margin-bottom: 10px;
-
+  font-family: 'Handlee', cursive;
+  margin: 10px 0px;
+  text-align:left;
 }
+
+#animal-info div{
+  padding: 20px 50px 10px 20px;
+}
+#infoHeading {
+text-decoration: underline;}
+
+
+
+
 
 #text-box-wrapper {
   display: flex;
