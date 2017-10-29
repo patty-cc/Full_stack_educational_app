@@ -8,7 +8,6 @@ app.use(express.static(__dirname + '/../client/build'));
 
 app.get("/api/animals", function(req, res) {
   getAllAnimals(function(data) {
-
     res.json(data);
   });
 });
