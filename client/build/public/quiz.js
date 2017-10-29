@@ -17,6 +17,8 @@ var createNextButton = function() {
     nextButton.innerText = "NEXT";
     buttonsWrapper.appendChild(nextButton);
     nextButton.addEventListener("click", function(){
+      var textBoxText = document.getElementById("text-box-text");
+      textBoxText.innerText = "Choose one of the answers above!";
       initializeQuiz(jungleSetIndexes);
     });
   }
@@ -33,6 +35,10 @@ var correctAnswerClicked = function(){
   textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
   if(jungleSetIndexes.length > 0){
     createNextButton();
+  } else {
+    var nextButton = document.getElementById("next-button");
+    nextButton.innerHTML = "";
+    textBoxText.innerText = "You've finished the quiz! Press HOME to get back to the map view!";
   }
 }
 
@@ -109,6 +115,7 @@ var initializeQuiz = function(indexesArray) {
     answer3.addEventListener("click", incorrectAnswerClicked);
   }
 
+  jungleSets.splice(index, 1);
   jungleSetIndexes.splice(index, 1);
   console.log("SPLICED INDEXES: ", jungleSetIndexes);
 }
