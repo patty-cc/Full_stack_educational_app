@@ -7,16 +7,23 @@ var displayWelcomeText = function() {
 }
 
 var createNextButton = function() {
-  var textBox = document.getElementById("text-box");
+  var buttonsWrapper = document.getElementById("text-box-buttons-wrapper");
   var nextButton = document.createElement("button");
   nextButton.setAttribute("id", "next-button");
-  nextButton.innerText = "Next";
-  textBox.appendChild(nextButton);
+  nextButton.innerText = "NEXT";
+  buttonsWrapper.appendChild(nextButton);
+}
+
+var incorrectAnswerClicked = function(){
+  this.style.visibility = "hidden"
+  var textBoxText = document.getElementById("text-box-text");
+  textBoxText.innerText = "Wrong! Try again!";
+
 }
 
 var correctAnswerClicked = function(){
   var textBoxText = document.getElementById("text-box-text");
-  textBoxText.innerText = "Correct! Click on the arrow to move to the next question!";
+  textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
   createNextButton();
 }
 
@@ -44,6 +51,7 @@ var initializeQuiz = function(data) {
   answersWrapper.appendChild(answer3);
 
   answer1.addEventListener("click", correctAnswerClicked);
+  answer2.addEventListener("click", incorrectAnswerClicked);
 }
 
 var displayHomeButton = function(){
