@@ -6,15 +6,18 @@ var displayWelcomeText = function() {
   textBox.appendChild(pTag);
 }
 
-
-
-var correctAnswerClicked = function(){
+var createNextButton = function() {
   var textBox = document.getElementById("text-box");
-  var textBoxText = document.getElementById("text-box-text");
-  textBoxText.innerText = "Correct! Click on the arrow to move to the next question!";
   var nextButton = document.createElement("button");
   nextButton.setAttribute("id", "next-button");
+  nextButton.innerText = "Next";
   textBox.appendChild(nextButton);
+}
+
+var correctAnswerClicked = function(){
+  var textBoxText = document.getElementById("text-box-text");
+  textBoxText.innerText = "Correct! Click on the arrow to move to the next question!";
+  createNextButton();
 }
 
 var initializeQuiz = function(data) {
@@ -43,11 +46,23 @@ var initializeQuiz = function(data) {
   answer1.addEventListener("click", correctAnswerClicked);
 }
 
+var displayHomeButton = function(){
+  var textBox = document.getElementById("text-box");
+  var buttonsDiv = document.createElement("div");
+  buttonsDiv.setAttribute("id", "text-box-buttons-wrapper");
+  textBox.appendChild(buttonsDiv);
+  var homeButton = document.createElement("button");
+  homeButton.setAttribute("id", "home-button");
+  homeButton.innerText = "HOME";
+  buttonsDiv.appendChild(homeButton);
+}
+
 var displayJournal = function() {
   var main = document.getElementById("background-image-wrapper");
   var journalDiv = document.createElement("div");
   journalDiv.setAttribute("id", "quiz-journal-box");
   main.appendChild(journalDiv);
+  displayHomeButton();
 }
 
 var makeRequest = function(url, callback) {

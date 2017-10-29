@@ -51,6 +51,7 @@ body {
   height: 100%;
   flex: 2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -84,4 +85,14 @@ body {
 #quiz-answers-wrapper p {
   margin: 3%;
   font-size: 2em;
+}
+
+#next-button {
+  margin-top: 10%;
+  margin-right: 10%;
+  padding: 1%;
+}
+
+#text-box-buttons-wrapper {
+  padding-top: 5%;
 }
