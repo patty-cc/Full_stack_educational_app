@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url('./images/MoreJungle.jpg');
+  background: url('./images/jungle.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -46,6 +46,13 @@ body {
   flex: 1;
 }
 
+button {
+  background-color: Transparent;
+  border: none;
+  font-size: 20px;
+  margin: 10px;
+}
+
 #text-box {
   background-color: green;
   height: 100%;
@@ -61,10 +68,10 @@ body {
 }
 
 #quiz-journal-box {
-  background: url('./images/journal_quiz.jpg');
-  height: 90%;
-  width: 90%;
-  background-repeat: no-repeat;
+  background: url('./images/oldpage.png');
+  height: 480px;
+  width: 700px;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -75,11 +82,18 @@ body {
   padding-left: 10%;
 }
 
+#quiz-img {
+  height: 100px;
+  width: 300px;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
 #quiz-answers-wrapper {
-  padding-top: 20%;
-  padding-left: 10%;
+  padding-top: 10%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #quiz-answers-wrapper p {
@@ -92,20 +106,17 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  /*justify-content: center;*/
+  justify-content: space-evenly;
 }
 
 #next-button {
   margin-left: 10%;
   padding: 6px;
   align-self: flex-end;
-
 }
 
 #home-button {
-  /*margin: 2%;*/
   padding: 6px;
   text-align: center;
   align-self: center;
-
 }

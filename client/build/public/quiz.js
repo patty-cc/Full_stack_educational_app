@@ -18,7 +18,6 @@ var incorrectAnswerClicked = function(){
   this.style.visibility = "hidden"
   var textBoxText = document.getElementById("text-box-text");
   textBoxText.innerText = "Wrong! Try again!";
-
 }
 
 var correctAnswerClicked = function(){
@@ -33,6 +32,11 @@ var initializeQuiz = function(data) {
   questionText.innerText = data[0].question;
   journalDiv.appendChild(questionText);
   console.log("question: ", data[0].question);
+
+  var jaguar = document.createElement("img");
+  jaguar.setAttribute("id", "quiz-img");
+  jaguar.src = data[0].img;
+  journalDiv.appendChild(jaguar);
 
   var answersWrapper = document.createElement("div");
   answersWrapper.setAttribute("id", "quiz-answers-wrapper");
@@ -52,6 +56,7 @@ var initializeQuiz = function(data) {
 
   answer1.addEventListener("click", correctAnswerClicked);
   answer2.addEventListener("click", incorrectAnswerClicked);
+  answer3.addEventListener("click", incorrectAnswerClicked);
 }
 
 var displayHomeButton = function(){

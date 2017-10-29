@@ -32,14 +32,14 @@ db.facts.insert([
 db.quiz.insert([
   {
     habitat: "Jungle",
-    question: "What is the animal?",
+    question: "What animal is it?",
     correctAnswer: ["Jaguar"],
     incorrectAnswer: ["Macaw", "Poison Dart Frog"],
-    img: "fdhjnd"
+    img: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsilhouettesfree.com%2Fanimals%2Fwild-animals%2Flioness-silhouette-image-5.png&f=1"
   },
   {
     habitat: "Jungle",
-    question: "How long can a Maccaw live upto?",
+    question: "How long can a Maccaw live up to?",
     correctAnswer: ["80 Years"],
     incorrectAnswer: ["10 Years", "45 Years"],
     img: "fdhjnd"
