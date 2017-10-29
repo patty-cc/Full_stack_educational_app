@@ -90,10 +90,10 @@ button:focus {
 }
 
 #quiz-img {
-  height: 100px;
-  width: 300px;
+  max-height: 200px;
+  max-width: 400px;
   align-self: center;
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 #quiz-answers-wrapper {
