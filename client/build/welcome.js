@@ -18,15 +18,15 @@ var timedText = function() {
   var speech = document.getElementById("welcome-text");
   var box = document.getElementById("text-box")
   setTimeout(function() {
-    printText("welcome-text", "Welcome to the animals of the world!", 80)
+    printText("welcome-text", "Welcome to the animals of the world!", 70)
   }, 0);
   setTimeout(function() {
 
     speech.innerHTML = "";
-    printText("welcome-text", "We'll be your tour guides on this adventure. Click where you want to go.", 80)
+    printText("welcome-text", "We'll be your tour guides on this adventure. Click where you want to go.", 70)
     box.style.background = "green url('./public/images/speechBubble3reverse.png') no-repeat"
     box.style.backgroundPosition = "right"
-  }, 4000)
+  }, 3500)
 }
 
 timedText();
