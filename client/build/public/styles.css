@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url('./images/MoreJungle.jpg');
+  background-color: #84b4e4;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -17,13 +17,11 @@ body {
   top: 0;
   width: 100%;
   height: 75%;
-  background-color: tomato;
+  background-color: #84b4e4;
   justify-content: center;
   align-items:center;
   background: url("./images/world3.png");
   background-size: contain;
-                 /* <------ */
-  /*background-size: cover;                  /* <------ */*/
   background-repeat:   no-repeat;
   background-position: center center;
 }
@@ -68,14 +66,16 @@ body {
 }
 
 #text-box {
-  /*background: url('./images/speech.png');
-  object-fit: contain;*/
+  background: url('./images/speechBubble.png');
+  object-fit: contain;
+  background-repeat: no-repeat;
   background-color: green;
   height: 100%;
   flex: 2;
 }
 
 #welcome-text {
-  padding-top: 2%;
-  padding-left: 1%;
+  text-align: center;
+  font-size: 2em;
+  padding: 3% 14%;
 }

@@ -22,7 +22,7 @@ var printText = function(destination, message, speed) {
 
 }
 
-printText("welcome-text", "Welcome to the animals of the world.", 100)
+printText("welcome-text", "Welcome to the animals of the world! We'll be your tour guides on this adventure. Click where you want to go.", 95)
 
 //
 // function secondFunction(){
