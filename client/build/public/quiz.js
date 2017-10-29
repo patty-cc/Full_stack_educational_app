@@ -1,5 +1,5 @@
 var jungleSets;
-var indexes = [];
+var jungleSetIndexes = [];
 
 var displayWelcomeText = function() {
   var textBox = document.getElementById("text-box");
@@ -10,11 +10,16 @@ var displayWelcomeText = function() {
 }
 
 var createNextButton = function() {
-  var buttonsWrapper = document.getElementById("text-box-buttons-wrapper");
-  var nextButton = document.createElement("button");
-  nextButton.setAttribute("id", "next-button");
-  nextButton.innerText = "NEXT";
-  buttonsWrapper.appendChild(nextButton);
+  if(!document.getElementById("next-button")) {
+    var buttonsWrapper = document.getElementById("text-box-buttons-wrapper");
+    var nextButton = document.createElement("button");
+    nextButton.setAttribute("id", "next-button");
+    nextButton.innerText = "NEXT";
+    buttonsWrapper.appendChild(nextButton);
+    nextButton.addEventListener("click", function(){
+      initializeQuiz(jungleSetIndexes);
+    });
+  }
 }
 
 var incorrectAnswerClicked = function(){
@@ -26,19 +31,27 @@ var incorrectAnswerClicked = function(){
 var correctAnswerClicked = function(){
   var textBoxText = document.getElementById("text-box-text");
   textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
-  createNextButton();
+  if(jungleSetIndexes.length > 0){
+    createNextButton();
+  }
+}
+
+var cleanQuiz = function(){
+  var question = document.getElementById("quiz-journal-box");
+  question.innerHTML = "";
 }
 
 var initializeQuiz = function(indexesArray) {
+  cleanQuiz();
   // get random index to select a random set from the question-answers array
   var index = getRandomArrayIndex(indexesArray);
-
+  console.log("MAIN INDEX: ", index);
+  console.log("ALL INDEXES: ", jungleSetIndexes);
 // create h1 element displaying the question from the selected set
   var journalDiv = document.getElementById("quiz-journal-box");
   var questionText = document.createElement("h1");
   questionText.innerText = jungleSets[index].question;
   journalDiv.appendChild(questionText);
-  console.log("question: ", jungleSets[index].question);
 
 // display image from the selected set
   var pic = document.createElement("img");
@@ -95,6 +108,9 @@ var initializeQuiz = function(indexesArray) {
   } else {
     answer3.addEventListener("click", incorrectAnswerClicked);
   }
+
+  jungleSetIndexes.splice(index, 1);
+  console.log("SPLICED INDEXES: ", jungleSetIndexes);
 }
 
 var displayHomeButton = function(){
@@ -123,10 +139,10 @@ var getRandomArrayIndex = function(array){
 
 var getIndexes = function(){
   for (var i = 0; i < jungleSets.length; i++){
-    indexes.push(i);
+    jungleSetIndexes.push(i);
   }
-  console.log("indexes: ", indexes);
-  initializeQuiz(indexes);
+  console.log("indexes: ", jungleSetIndexes);
+  initializeQuiz(jungleSetIndexes);
 }
 
 var getJungleSets = function(data){
