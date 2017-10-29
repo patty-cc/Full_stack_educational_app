@@ -32,7 +32,7 @@ body {
   display: flex;
   background-color: wheat;
   height: 25%;
-  width: 99%;
+  width: 98.7%;
   position: fixed;
   bottom: 0;
   border: 10px double black;
@@ -62,7 +62,14 @@ body {
 }
 
 #text-box {
+  /*background: url('./images/speech.png');
+  object-fit: contain;*/
   background-color: green;
   height: 100%;
   flex: 2;
+}
+
+#welcome-text {
+  padding-top: 2%;
+  padding-left: 1%;
 }
