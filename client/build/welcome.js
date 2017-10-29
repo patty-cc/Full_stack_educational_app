@@ -1,16 +1,7 @@
 
-// var welcomeText = function() {
-//   var pTag = document.getElementById("welcome-text");
-//   var div = document.getElementById("text-box");
-//   pTag.innerText = "Welcome to the animals of the world!"
-//   // div.appendChild(pTag);
-// }
-//
-// welcomeText();
-
-var isPaused = false;
-
 var printText = function(destination, message, speed) {
+  // var audio = new Audio('public/click2.mp3');
+
   var i = 0;
   var interval = setInterval(function() {
     document.getElementById(destination).innerHTML += message.charAt(i);
@@ -18,23 +9,24 @@ var printText = function(destination, message, speed) {
     if (i > message.length) {
       clearInterval(interval);
     }
+    // audio.play();
   }, speed);
 
 }
 
-printText("welcome-text", "Welcome to the animals of the world! We'll be your tour guides on this adventure. Click where you want to go.", 95)
+var timedText = function() {
+  var speech = document.getElementById("welcome-text");
+  var box = document.getElementById("text-box")
+  setTimeout(function() {
+    printText("welcome-text", "Welcome to the animals of the world!", 80)
+  }, 0);
+  setTimeout(function() {
 
-//
-// function secondFunction(){
-//     firstFunction()
-//
-//     alert("Here");
-//
-//     function waitForIt(){
-//         if (isPaused) {
-//             setTimeout(function(){waitForIt()},100);
-//         } else {
-//             // go do that thing
-//         };
-//     }
-// };
+    speech.innerHTML = "";
+    printText("welcome-text", "We'll be your tour guides on this adventure. Click where you want to go.", 80)
+    box.style.background = "green url('./public/images/speechBubble3reverse.png') no-repeat"
+    box.style.backgroundPosition = "right"
+  }, 4000)
+}
+
+timedText();
