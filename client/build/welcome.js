@@ -18,10 +18,23 @@ var printText = function(destination, message, speed) {
     if (i > message.length) {
       clearInterval(interval);
     }
-  }, speed)
-}
+  }, speed);
 
+}
 
 printText("welcome-text", "Welcome to the animals of the world.", 100)
 
-when(printText).done(printText("welcome-text", "My name is...", 100))
+//
+// function secondFunction(){
+//     firstFunction()
+//
+//     alert("Here");
+//
+//     function waitForIt(){
+//         if (isPaused) {
+//             setTimeout(function(){waitForIt()},100);
+//         } else {
+//             // go do that thing
+//         };
+//     }
+// };

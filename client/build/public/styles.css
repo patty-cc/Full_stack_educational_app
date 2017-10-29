@@ -20,12 +20,18 @@ body {
   background-color: tomato;
   justify-content: center;
   align-items:center;
+  background: url("./images/world3.png");
+  background-size: contain;
+                 /* <------ */
+  /*background-size: cover;                  /* <------ */*/
+  background-repeat:   no-repeat;
+  background-position: center center;
 }
 
 #animal-picture-wrapper {
-  height: 200px;
+  /*height: 200px;
   width: 200px;
-  background: url('./images/macaw.jpg');
+  background: url('./images/macaw.jpg');*/
 }
 
 #text-box-wrapper {
