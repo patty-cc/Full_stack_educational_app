@@ -72,7 +72,7 @@ var requestHelper = __webpack_require__(1);
 var renderAnimalsInfo = function(animals, counter) {
   var animalPic = document.getElementById('animalImg')
 
-  var pictures = ['./public/images/Macaw.png','./public/images/tree-jaguar.png','./public/images/Dart-frog.png']
+  var pictures = ['/public/images/Macaw.png','/public/images/tree-jaguar.png','/public/images/Dart-frog.png']
 
   animalPic.src = pictures[counter]
   // animalPic.height = '300'
@@ -114,7 +114,7 @@ var renderAnimalsInfo = function(animals, counter) {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  requestHelper.getRequest('http://localhost:3000/api/animals', function(animals) {
+  requestHelper.getRequest('http://localhost:3000/api/animals/jungle', function(animals) {
 
     counter = 0
     renderAnimalsInfo(animals, counter)
