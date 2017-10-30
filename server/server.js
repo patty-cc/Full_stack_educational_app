@@ -5,7 +5,7 @@ var animalRouter = require('./controller/animalController.js')
 app.use(express.static(__dirname + '/../client/build'))
 
 app.get("/info/jungle", function(req, res) {
-  res.sendFile("../../client/build/public/index.html")
+  res.sendFile("../../client/build/public/info.html")
 })
 
 // app.get("/desert", function(req, res) {
