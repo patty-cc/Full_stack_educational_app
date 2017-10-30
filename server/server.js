@@ -16,9 +16,9 @@ var getAllQuiz = require("./db/db_quiz.js");
 //   getAllAnimals(function(data) {
 
 
-app.get("/info/jungle", function(req, res) {
-  res.sendFile(path.join(__dirname, "/../client/build/info.html"))
-})
+// app.get("/info/jungle", function(req, res) {
+//   res.sendFile(path.join(__dirname, "/../client/build/info.html"))
+// })
 
 // app.get("/desert", function(req, res) {
 //   res.sendFile("../")

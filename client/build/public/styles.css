@@ -66,29 +66,78 @@ body {
 }
 
 #text-box {
-  background: url('./images/speechBubble2.png');
-  object-fit: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: green;
-  height: 100%;
-  flex: 2;
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  height: 60%;
+  width: 70%;
+  background-color: lightyellow;
+  border: 8px solid #666;
+  border-radius: 30px;
+}
+
+#text-box:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+#text-box:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
 }
 
 #text-box2 {
-  background: url('./images/speechBubble2reverse.png');
-  object-fit: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-color: green;
-  height: 100%;
-  flex: 2;
+  margin: 20px;
+  display: flex;
+  position: relative;
+  height: 60%;
+  width: 70%;
+  background-color: lightyellow;
+  border: 8px solid #666;
+  border-radius: 30px;
 }
 
+#text-box2:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -8px;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent #666 transparent transparent;
+}
+#text-box2:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent lightyellow transparent transparent;
+}
 #welcome-text {
-  /*text-align: center;*/
-  font-size: 2em;
-  padding: 5% 25% 3% 25%;
+  font-size: 2.5em;
+  padding: 3% 25% 3% 25%;
+  text-align: center;
 }
 
 #jungle-button {
@@ -142,8 +191,8 @@ body {
   text-align: center;
 }
 p {
-  font-family: 'Handlee', cursive;
-  font-size: 25px;
+  /*font-family: 'Handlee', cursive;
+  font-size: 25px;*/
 
 }
 
