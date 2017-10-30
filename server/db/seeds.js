@@ -32,45 +32,20 @@ db.facts.insert([
 db.quiz.insert([
   {
     habitat: "Jungle",
-    question: "What animal is it?",
+    question: "What animal is this?",
     answers:[{text: "Jaguar", correct: true}, {text: "Macaw", correct: false}, {text: "Poison Dart Frog", correct: false}],
-    img: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsilhouettesfree.com%2Fanimals%2Fwild-animals%2Flioness-silhouette-image-5.png&f=1"
+    img: '/public/images/jaguaredit.png'
   },
   {
     habitat: "Jungle",
-    question: "How long can a Macaw live up to?",
+    question: "For how long can a Macaw live?",
     answers: [{text: "80 years", correct: true}, {text: "10 years", correct: false}, {text: "45 years", correct: false}],
-    img: "http://pngimg.com/uploads/parrot/parrot_PNG726.png"
+    img: '/public/images/macawedit.png'
   },
   {
     habitat: "Jungle",
     question: "What do you call a group of Poison Dart Frogs?",
     answers: [{text: "Army", correct: true}, {text: "Jamboree", correct: false}, {text: "Flock", correct: false}],
-    img: "https://img.clipartxtras.com/bbe4e8b7f44f980a9eb08c40a7375297_poison-dart-frog-clip-art-poison-dart-frog-clipart_600-467.png"
+    img: '/public/images/frog.png'
   }
 ])
-
-
-// db.quiz.insert([
-//   {
-//     habitat: "Jungle",
-//     question: "What animal is it?",
-//     correctAnswer: ["Jaguar"],
-//     incorrectAnswer: ["Macaw", "Poison Dart Frog"],
-//     img: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsilhouettesfree.com%2Fanimals%2Fwild-animals%2Flioness-silhouette-image-5.png&f=1"
-//   },
-//   {
-//     habitat: "Jungle",
-//     question: "How long can a Macaw live up to?",
-//     correctAnswer: ["80 Years"],
-//     incorrectAnswer: ["10 Years", "45 Years"],
-//     img: "http://pngimg.com/uploads/parrot/parrot_PNG726.png"
-//   },
-//   {
-//     habitat: "Jungle",
-//     question: "What do you call a group of Poison Dart Frogs?",
-//     correctAnswer: ["Army"],
-//     incorrectAnswer: ["Jamboree", "Flock"],
-//     img: "https://img.clipartxtras.com/bbe4e8b7f44f980a9eb08c40a7375297_poison-dart-frog-clip-art-poison-dart-frog-clipart_600-467.png"
-//   }
-// ])

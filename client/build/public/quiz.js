@@ -140,9 +140,8 @@ var displayJournal = function() {
 }
 
 var getRandomArrayIndex = function(array){
-    return Math.floor(Math.random()*(array.length));
+  return Math.floor(Math.random()*(array.length));
 }
-
 
 var getIndexes = function(){
   for (var i = 0; i < jungleSets.length; i++){
