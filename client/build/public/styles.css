@@ -116,3 +116,38 @@ body {
   align-items: center;
   object-fit: fill;
 }
+
+
+#animal-picture-wrapper {
+  flex:1;
+  position: relative;
+  padding-left: 15%;
+  height: 90%;
+  width: 100%;
+}
+
+
+
+#animalImg{
+  position: relative;
+  height: 85%;
+  width: 95%;
+  justify-content: right;
+  z-index: 1;
+}
+
+#name{
+  position: relative;
+  bottom: 100px;
+  text-align: center;
+}
+p {
+  font-family: 'Handlee', cursive;
+  font-size: 25px;
+
+}
+
+#quiz-button {
+  position: fixed;
+  bottom: 0;
+}

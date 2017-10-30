@@ -9,6 +9,7 @@ var createJungleButton = function(){
   jungleDiv.appendChild(jungleBtn);
   jungleBtn.addEventListener("click", function() {
     makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo);
+    createQuizButton();
   })
 }
 var printText = function(destination, message, speed) {
