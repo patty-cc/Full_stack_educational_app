@@ -75,6 +75,16 @@ body {
   flex: 2;
 }
 
+#text-box2 {
+  background: url('./images/speechBubble2reverse.png');
+  object-fit: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: green;
+  height: 100%;
+  flex: 2;
+}
+
 #welcome-text {
   /*text-align: center;*/
   font-size: 2em;
