@@ -19,7 +19,7 @@ app.get("/api/quiz", function(req, res){
 });
 
 app.get("/quiz/jungle", function(req, res) {
-  res.sendFile(path.join(__dirname + '/../client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/../client/build/quiz.html'));
 });
 
 
