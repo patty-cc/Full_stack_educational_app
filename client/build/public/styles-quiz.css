@@ -72,6 +72,7 @@ button:focus {
 }
 
 #text-box-text {
+  text-align: center;
   padding: 0 10%;
 }
 
