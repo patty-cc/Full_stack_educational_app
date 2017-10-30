@@ -33,4 +33,4 @@ function draw(){
  ctx.drawImage(character,srcX,0,width2,height2,-5,0,width2,height2);
 }
 
-setInterval(draw,130);
+// setInterval(draw,130);

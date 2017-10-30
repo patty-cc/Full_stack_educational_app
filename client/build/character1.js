@@ -33,4 +33,4 @@ function draw1(){
  ctx1.drawImage(character1,srcX1,0,width1,height1,-3,0,width1,height1);
 }
 
-setInterval(draw1,180);
+// setInterval(draw1,180);

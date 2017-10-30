@@ -1,7 +1,39 @@
-var requestHelper = require('./helpers/request_helper.js');
+var makeRequest = function(url, callback) {
+  var request = new XMLHttpRequest();
+    request.open( "GET", url);
+    request.addEventListener( "load", function() {
+      var data = JSON.parse(this.responseText);
+      console.log(data);
+      console.log("request is made")
+      callback(data);
+  });
+  request.send();
+}
+
+var renderJungleInfo = function(data){
+  console.log(data);
+  var jungleBtn = document.getElementById("jungle-button");
+  var background = document.getElementById("background-image-wrapper");
+
+  jungleBtn.style.display ="none";
+
+  background.style.background = "url(./public/images/jungle.jpg)"
+  renderAnimalsInfo(data,0)
+
+
+}
 
 var renderAnimalsInfo = function(animals, counter) {
+  var backgroundImageWrapper = document.getElementById('background-image-wrapper')
+  var journalImage = document.createElement('div')
+  journalImage.id = 'journal-image'
+  backgroundImageWrapper.appendChild(journalImage)
+
+
+
   var animalPic = document.getElementById('animalImg')
+
+
 
   var pictures = ['/public/images/Macaw.png','/public/images/tree-jaguar.png','/public/images/Dart-frog.png']
 
@@ -45,16 +77,20 @@ var renderAnimalsInfo = function(animals, counter) {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-  requestHelper.getRequest('http://localhost:3000/api/animals/jungle', function(animals) {
+  makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo)});
 
-    counter = 0
-    renderAnimalsInfo(animals, counter)
-    counter ++
 
-    var nextButton = document.getElementById('button')
-    nextButton.addEventListener('click', function(){
-      renderAnimalsInfo(animals, counter)
-      counter ++
-    })
-  })
-})
+
+  // function(animals) {
+  //
+  //   counter = 0
+  //   renderAnimalsInfo(animals, counter)
+  //   counter ++
+  //
+  //   var nextButton = document.getElementById('button')
+  //   nextButton.addEventListener('click', function(){
+  //     renderAnimalsInfo(animals, counter)
+  //     counter ++
+  //   })
+
+// })

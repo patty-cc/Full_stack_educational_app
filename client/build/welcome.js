@@ -1,4 +1,16 @@
-
+var createJungleButton = function(){
+  var main = document.getElementById("background-image-wrapper");
+  var jungleDiv = document.createElement("div");
+  var jungleBtn = document.createElement("img");
+  jungleDiv.setAttribute("id", "jungle");
+  main.appendChild(jungleDiv);
+  jungleBtn.setAttribute("id", "jungle-button");
+  jungleBtn.src="./public/images/leaf.png";
+  jungleDiv.appendChild(jungleBtn);
+  jungleBtn.addEventListener("click", function() {
+    makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo);
+  })
+}
 var printText = function(destination, message, speed) {
   // var audio = new Audio('public/click2.mp3'); --h8 git
 
@@ -33,11 +45,12 @@ var timedText = function() {
 timedText();
 
 var transition = function() {
+  var jungleBtn = document.getElementById("jungle-button");
   var background = document.getElementById("background-image-wrapper");
   var speech = document.getElementById("welcome-text");
 
 
-  jungleButton.style.display ="none"
+  jungleBtn.style.display ="none"
   background.style.opacity = 0;
   background.style.background = "green url('./public/images/jungle.jpg') no-repeat"
   background.style.opacity = 1;
@@ -66,5 +79,5 @@ var transition = function() {
 }
 
 
-var jungleButton = document.getElementById("jungle-button")
-jungleButton.addEventListener("click", transition)
+// var jungleButton = document.getElementById("jungle-button")
+// jungleButton.addEventListener("click", transition)

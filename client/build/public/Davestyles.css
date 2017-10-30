@@ -4,11 +4,33 @@
 }
 
 body {
+
+  background: url('./images/jungle.jpg');
+
   background-color: #84b4e4;
+
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  position: fixed;
 
+}
+
+
+#journal-image {
+
+  background-image: url('./images/journal.png');
+  background-size: contain;
+  background-position: center;
+  position: fixed;
+
+  height: 65%;
+  width: 75%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: fill;
 }
 
 #background-image-wrapper {
@@ -17,20 +39,69 @@ body {
   top: 0;
   width: 100%;
   height: 75%;
-  background-color: #84b4e4;
+
   justify-content: center;
   align-items:center;
-  background: url("./images/world3.png");
+
+
+}
+
+#animal-picture-wrapper {
+  flex:1;
+  position: relative;
+  padding-left: 15%;
+  height: 90%;
+  width: 100%;
+}
+
+
+
+#animalImg{
+  position: relative;
+  height: 85%;
+  width: 95%;
+  justify-content: right;
+}
+#name{
+  position: relative;
+  bottom: 100px;
+  text-align: center;
+}
+p {
+  font-family: 'Handlee', cursive;
+  font-size: 25px;
+
+}
+
+#animal-info {
+  flex:1 ;
+  height:100%;
+  width:60%;
+  margin: 10px 10px;
+  text-align:left;
+}
+
+#animal-info div{
+  padding: 20px 50px 10px 20px;
+
+  /*background-color: #84b4e4;*/
+  justify-content: center;
+  align-items:center;
+  /*background: url("./images/world3.png");*/
   background-size: contain;
   background-repeat:   no-repeat;
   background-position: center center;
 }
 
-#animal-picture-wrapper {
-  /*height: 200px;
-  width: 200px;
-  background: url('./images/macaw.jpg');*/
+
+
 }
+#infoHeading {
+text-decoration: underline;}
+
+
+
+
 
 #text-box-wrapper {
   display: flex;
@@ -95,24 +166,4 @@ body {
   height: 15%;
   width: 15%;
   margin-top: 22%;
-}
-
-
-
-/* DAVE CSS */
-
-#journal-image {
-
-  background-image: url('./images/journal.png');
-  background-size: contain;
-  background-position: center;
-  position: fixed;
-
-  height: 65%;
-  width: 75%;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: fill;
 }
