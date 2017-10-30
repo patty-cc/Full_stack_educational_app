@@ -1,6 +1,6 @@
 
 var printText = function(destination, message, speed) {
-  // var audio = new Audio('public/click2.mp3');
+  // var audio = new Audio('public/click2.mp3'); --h8 git
 
   var i = 0;
   var interval = setInterval(function() {
