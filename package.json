@@ -1,5 +1,5 @@
 {
-  "name": "full_stack_educational_app",
+  "name": "Full_stack_educational_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/patty-cc/Full_stack_educational_app.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

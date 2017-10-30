@@ -4,7 +4,11 @@
 }
 
 body {
+
   background: url('./images/jungle.jpg');
+
+  background-color: #84b4e4;
+
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -35,6 +39,7 @@ body {
   top: 0;
   width: 100%;
   height: 75%;
+
   justify-content: center;
   align-items:center;
 
@@ -78,6 +83,18 @@ p {
 
 #animal-info div{
   padding: 20px 50px 10px 20px;
+
+  background-color: #84b4e4;
+  justify-content: center;
+  align-items:center;
+  background: url("./images/world3.png");
+  background-size: contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+
+
 }
 #infoHeading {
 text-decoration: underline;}
@@ -90,25 +107,63 @@ text-decoration: underline;}
   display: flex;
   background-color: wheat;
   height: 25%;
-  width: 100%;
+  width: 99.1%;
   position: fixed;
   bottom: 0;
+  border: 10px double black;
+  border-right:10px double black;
 }
 
-#boy-explorer {
-  background-color: dodgerblue;
+.boy-explorer {
+  /*background-color: dodgerblue;*/
   height: 100%;
   flex: 1;
+  text-align: center;
 }
 
-#girl-explorer {
-  background-color: hotpink;
+#explorer1 {
+  padding-left: 10%;
+}
+
+.girl-explorer {
+  /*background-color: hotpink;*/
   height: 100%;
   flex: 1;
+  text-align: center;
+}
+
+#explorer2 {
+  padding-left: 10%;
 }
 
 #text-box {
+  background: url('./images/speechBubble2.png');
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: green;
   height: 100%;
   flex: 2;
+}
+
+#text-box2 {
+  background: url('./images/speechBubble2reverse.png');
+  object-fit: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: green;
+  height: 100%;
+  flex: 2;
+}
+
+#welcome-text {
+  /*text-align: center;*/
+  font-size: 2em;
+  padding: 5% 25% 3% 25%;
+}
+
+#jungle-button {
+  height: 15%;
+  width: 15%;
+  margin-top: 22%;
 }
