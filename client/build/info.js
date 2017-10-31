@@ -79,7 +79,7 @@ var htmlSetup = function (animalData) {
   pageSection.className = "page active"
   bookArticle.appendChild(pageSection)
     var frontDiv = document.createElement('div')
-    frontDiv.className = "front"
+    frontDiv.className = "front cover"
     pageSection.appendChild(frontDiv)
       var h1 = document.createElement('h1')
       frontDiv.appendChild(h1)
@@ -93,9 +93,10 @@ for (animal of animalData) {
     var backDiv = document.createElement('div')
     backDiv.className = "back"
     pageSection.appendChild(backDiv)
+
       var animalImg = document.createElement('img')
       animalImg.id = "animal-img"
-      // animalImg.src = animal.img
+      animalImg.src = animal.img
       backDiv.appendChild(animalImg)
       var animalImgText = document.createElement('p')
       animalImgText.id = "animal-name"
@@ -145,7 +146,7 @@ for (animal of animalData) {
         animalFunFact.appendChild(animalFunFactText)
 }
     var backDiv = document.createElement('div')
-    backDiv.className = "back"
+    backDiv.className = "back cover"
     pageSection.appendChild(backDiv)
       var h1 = document.createElement('h1')
       backDiv.appendChild(h1)
