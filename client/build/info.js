@@ -19,6 +19,15 @@ var renderJungleInfo = function(data){
 
   background.style.background = "url(./public/images/jungle.jpg)"
 
+  setTimeout(function() {
+    var welcomeText = document.getElementById("welcome-text");
+    welcomeText.innerHTML = "";
+    var textBox = document.getElementById("text-box2");
+    textBox.id = "text-box";
+
+    printText("welcome-text", "Wow, we have so many animals in our book", 60)
+  }, 7000);
+
 
 
   //createHtml()
@@ -214,7 +223,12 @@ var createHtml = function(){
         infoHeading.innerText = "Fun Fact"
         animalFunfact.appendChild(infoHeading)
 
+
+
 }
+
+
+
 
 var renderAnimalsInfo = function(animals, counter) {
 
@@ -245,6 +259,7 @@ var animalImg = document.getElementById('animalImg')
   if (!animalFunfactText) {
     animalFunfactText = document.createElement('p')
     animalFunfactText.id = 'animal-funfact-text'
+
   }
 
 

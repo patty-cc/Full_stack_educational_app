@@ -10,8 +10,27 @@ var createJungleButton = function(){
   jungleBtn.addEventListener("click", function() {
     makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo);
     createQuizButton();
+
+    var textBox = document.getElementById("text-box2");
+    textBox.id = "text-box";
+    var welcomeText = document.getElementById("welcome-text");
+    welcomeText.innerHTML = "";
+    printText("welcome-text", "Welcome to the Jungle!", 60)
+
+    setTimeout(function() {
+      var welcomeText = document.getElementById("welcome-text");
+      welcomeText.innerHTML = "";
+      var textBox = document.getElementById("text-box");
+      textBox.id = "text-box2";
+
+      printText("welcome-text", "Let's see whats in our book", 60)
+    }, 2500);
+
+
+
   })
 }
+
 var printText = function(destination, message, speed) {
   // var audio = new Audio('public/click2.mp3'); --h8 git
 
@@ -39,8 +58,6 @@ var timedText = function() {
     printText("welcome-text", "We'll be your tour guides on this adventure. Where would you like to go?", 60)
     box.id = "text-box2";
 
-    // box.style.background = "green url('./public/images/speechBubble2reverse.png') no-repeat"
-    // box.style.backgroundPosition = "right";
   }, 3500)
 }
 
