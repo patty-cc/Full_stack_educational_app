@@ -197,9 +197,23 @@ for (animal of animalData) {
       backDiv.appendChild(p)
 }
 
+var createQuizButton = function() {
+  var quizButton = document.createElement('button');
+  // quizButton.id = 'quiz-button'
+  quizButton.setAttribute("class","quiz-button");
+  quizButton.innerText = "Quiz";
+  var textBox = document.getElementById('text-box-wrapper');
+  textBox.appendChild(quizButton);
 
-window.addEventListener('DOMContentLoaded', function() {
-  makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo)});
+  quizButton.addEventListener("click", function() {
+    initializeJungleQuiz();
+  });
+
+}
+
+//
+// window.addEventListener('DOMContentLoaded', function() {
+//   makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo)});
 
 
 // end of new code
@@ -302,19 +316,7 @@ window.addEventListener('DOMContentLoaded', function() {
 //   animalFunfact.appendChild(animalFunfactText)
 // }
 //
-var createQuizButton = function() {
-  var quizButton = document.createElement('button');
-  // quizButton.id = 'quiz-button'
-  quizButton.setAttribute("class","quiz-button");
-  quizButton.innerText = "Quiz";
-  var textBox = document.getElementById('text-box-wrapper');
-  textBox.appendChild(quizButton);
 
-  quizButton.addEventListener("click", function() {
-    initializeJungleQuiz();
-  });
-
-}
 //
 
 
