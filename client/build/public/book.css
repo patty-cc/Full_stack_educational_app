@@ -19,7 +19,7 @@ h1 {
 }
 .book {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
   transform-style: preserve-3d;
   font-family: 'Handlee', cursive;
@@ -95,7 +95,7 @@ and (orientation : portrait) {
 
 #animal-img {
   height: 100%;
-  width: 65%;
+  width: 70%;
   margin: auto;
 }
 
