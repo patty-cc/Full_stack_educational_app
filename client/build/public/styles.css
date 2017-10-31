@@ -168,20 +168,39 @@ body {
 
 
 #animal-picture-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex:1;
-  position: relative;
-  padding-left: 15%;
+  /*position: relative;*/
+  /*padding-left: 15%;*/
   height: 90%;
   width: 100%;
 }
 
+#animal-info {
+  flex:1 ;
+  height:100%;
+  width:60%;
+  margin: 10px 10px;
+  text-align:left;
+  /*padding: 20px 50px 10px 20px;*/
 
+  /*background-color: #84b4e4;*/
+  justify-content: center;
+  align-items:center;
+  /*background: url("./images/world3.png");*/
+  background-size: contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
 
 #animalImg{
   position: relative;
-  height: 85%;
-  width: 95%;
-  justify-content: right;
+  max-height: 80%;
+  /*max-width: 80%;*/
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 
@@ -189,10 +208,12 @@ body {
   position: relative;
   bottom: 100px;
   text-align: center;
+
 }
-p {
-  /*font-family: 'Handlee', cursive;
-  font-size: 25px;*/
+
+#animal-info {
+  font-family: 'Handlee', cursive;
+  font-size: 25px;
 
 }
 

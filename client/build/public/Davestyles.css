@@ -62,11 +62,13 @@ body {
   width: 95%;
   justify-content: right;
 }
+
 #name{
   position: relative;
   bottom: 100px;
   text-align: center;
 }
+
 p {
   font-family: 'Handlee', cursive;
   font-size: 25px;
