@@ -29,19 +29,19 @@ var getAllQuiz = require("./db/db_quiz.js");
 // })
 
 
-// app.get("/api/quiz", function(req, res){
-//   getAllQuiz(function(data){
-//     res.json(data);
-//   })
-// })
+app.get("/api/quiz", function(req, res){
+  getAllQuiz(function(data){
+    res.json(data);
+  })
+});
 
 app.get("/home", function(req, res) {
   res.sendFile(path.join(__dirname + '/../client/build/index.html'));
-})
+});
 
 app.use("/api/animals", animalRouter)
 
 
 app.listen(3000, function() {
   console.log("it worked");
-})
+});

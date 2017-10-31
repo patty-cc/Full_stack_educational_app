@@ -136,14 +136,15 @@ var animalImg = document.getElementById('animalImg')
 
 var createQuizButton = function() {
   var quizButton = document.createElement('button');
-  quizButton.id = 'quiz-button'
+  // quizButton.id = 'quiz-button'
+  quizButton.setAttribute("class","quiz-button");
   quizButton.innerText = "Quiz";
-  var textBox = document.getElementById('text-box')
-  textBox.appendChild(quizButton)
+  var textBox = document.getElementById('text-box-wrapper');
+  textBox.appendChild(quizButton);
 
-  quizButton.addEventListener("click", function(e) {
-    console.log("jungle quiz clicked")
-  })
+  quizButton.addEventListener("click", function() {
+    initializeJungleQuiz();
+  });
 
 }
 

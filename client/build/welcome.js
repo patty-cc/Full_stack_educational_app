@@ -38,6 +38,7 @@ var timedText = function() {
     speech.innerHTML = "";
     printText("welcome-text", "We'll be your tour guides on this adventure. Where would you like to go?", 60)
     box.id = "text-box2";
+
     // box.style.background = "green url('./public/images/speechBubble2reverse.png') no-repeat"
     // box.style.backgroundPosition = "right";
   }, 3500)

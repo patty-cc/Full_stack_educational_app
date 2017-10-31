@@ -29,26 +29,24 @@ db.facts.insert([
   }
 ])
 
+
 db.quiz.insert([
   {
     habitat: "Jungle",
-    question: "What is the animal?",
-    correctAnswer: ["Jaguar"],
-    incorrectAnswer: ["Macaw", "Poison Dart Frog"],
-    img: "fdhjnd"
+    question: "What animal is this?",
+    answers:[{text: "Jaguar", correct: true}, {text: "Macaw", correct: false}, {text: "Poison Dart Frog", correct: false}],
+    img: '/public/images/jaguaredit.png'
   },
   {
     habitat: "Jungle",
-    question: "How long can a Maccaw live upto?",
-    correctAnswer: ["80 Years"],
-    incorrectAnswer: ["10 Years", "45 Years"],
-    img: "fdhjnd"
+    question: "For how long can a Macaw live?",
+    answers: [{text: "80 years", correct: true}, {text: "10 years", correct: false}, {text: "45 years", correct: false}],
+    img: '/public/images/macawedit.png'
   },
   {
     habitat: "Jungle",
     question: "What do you call a group of Poison Dart Frogs?",
-    correctAnswer: ["Army"],
-    incorrectAnswer: ["Jamboree", "Flock"],
-    img: "fdhjnd"
+    answers: [{text: "Army", correct: true}, {text: "Jamboree", correct: false}, {text: "Flock", correct: false}],
+    img: '/public/images/frog.png'
   }
 ])
