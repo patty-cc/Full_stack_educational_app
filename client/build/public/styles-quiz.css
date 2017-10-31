@@ -10,7 +10,7 @@ body {
   display: flex;
 }
 
-#background-image-wrapper {
+#quiz-background-image-wrapper {
   display: flex;
   position: fixed;
   /*top: 0;*/
