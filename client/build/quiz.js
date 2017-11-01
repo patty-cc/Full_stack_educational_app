@@ -136,12 +136,10 @@ var initializeQuiz = function(indexesArray) {
 }
 
 var displayHomeButton = function(){
-  var textBoxWrapper = document.getElementById("text-box-wrapper");
-  var homeButton = document.createElement("button");
-  homeButton.setAttribute("id", "quiz-home-button");
-  homeButton.setAttribute("class", "quiz-button");
-  homeButton.innerText = "HOME";
-  textBoxWrapper.appendChild(homeButton);
+  var backgroundImageWrapper = document.getElementById('quiz-background-image-wrapper');
+  var homeButton = document.createElement('div');
+  homeButton.id = "home-button";
+  backgroundImageWrapper.appendChild(homeButton);
 }
 
 var displayJournal = function() {

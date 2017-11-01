@@ -2,12 +2,14 @@
   margin: 0px;
   padding:0px;
 }
+
 body {
   background-color: #84b4e4;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
 }
+
 #background-image-wrapper {
   display: flex;
   position: fixed;
@@ -22,108 +24,99 @@ body {
   background-repeat:   no-repeat;
   background-position: center center;
 }
+
 #quiz-background-image-wrapper {
   display: flex;
   position: fixed;
-  /*top: 0;*/
   width: 100%;
   height: 75%;
   justify-content: center;
   align-items: center;
 }
+
 #quiz-journal-box {
   background: url(./images/oldpage.png);
-    height: 429px;
-    width: 626px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
+  height: 429px;
+  width: 626px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Handlee', cursive;
 }
+
 #quiz-journal-box h1 {
   align-self: center;
   margin-top: 7%;
   margin-left: 5%;
   text-align: center;
 }
+
 #quiz-img {
   max-height: 200px;
   max-width: 400px;
   align-self: center;
   margin-top: 6%;
 }
+
 #quiz-answers-wrapper {
   padding-top: 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 #quiz-answers-wrapper p {
   margin: 3%;
   font-size: 2em;
 }
-/*#quiz-text-box-buttons-wrapper {
-  padding-top: 5%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}*/
-#quiz-next-button {
-  /*margin-left: 10%;*/
-  /*padding: 6px;*/
-  /*align-self: flex-end;*/
-}
-#quiz-home-button {
-  /*padding: 6px;*/
-  /*text-align: center;*/
-  /*align-self: center;*/
-}
+
 .quiz-button {
   background-color: Transparent;
   border: none;
   font-size: 20px;
-  /*margin: auto;*/
+  font-family: 'Handlee', cursive;
 }
+
 .quiz-button:hover {
   text-decoration: underline;
 }
+
 .quiz-button:focus {
   outline: none;
 }
-#animal-picture-wrapper {
-  /*height: 200px;
-  width: 200px;
-  background: url('./images/macaw.jpg');*/
-}
+
 #text-box-wrapper {
   display: flex;
   background-color: wheat;
   height: 25%;
-  width: 99.1%;
+  width: 98.6%;
   position: fixed;
   bottom: 0;
   border: 10px double black;
   border-right:10px double black;
 }
+
 .boy-explorer {
-  /*background-color: dodgerblue;*/
   height: 100%;
   flex: 1;
   text-align: center;
 }
+
 #explorer1 {
   padding-left: 10%;
 }
+
 .girl-explorer {
-  /*background-color: hotpink;*/
   height: 100%;
   flex: 1;
   text-align: center;
 }
+
 #explorer2 {
   padding-left: 10%;
 }
+
 #text-box {
   margin: 40px;
   display: inline-block;
@@ -134,30 +127,33 @@ body {
   border: 8px solid #666;
   border-radius: 30px;
 }
+
 #text-box:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: -8px;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -8px;
   right: auto;
   top: auto;
-    bottom: -40px;
-    border: 32px solid;
-    border-color: transparent transparent transparent #666;
+  bottom: -40px;
+  border: 32px solid;
+  border-color: transparent transparent transparent #666;
 }
+
 #text-box:after{
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0px;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
   right: auto;
   top: auto;
-    bottom: -20px;
-    border: 22px solid;
-    border-color: transparent transparent transparent lightyellow;
+  bottom: -20px;
+  border: 22px solid;
+  border-color: transparent transparent transparent lightyellow;
 }
+
 #text-box2 {
   margin: 20px;
   display: flex;
@@ -168,33 +164,37 @@ body {
   border: 8px solid #666;
   border-radius: 30px;
 }
+
 #text-box2:before {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
   left: auto;
-    right: -8px;
-    bottom: -40px;
-    border: 32px solid;
-    border-color: transparent #666 transparent transparent;
+  right: -8px;
+  bottom: -40px;
+  border: 32px solid;
+  border-color: transparent #666 transparent transparent;
 }
+
 #text-box2:after{
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
   left: auto;
-    right: 0px;
-    bottom: -20px;
-    border: 22px solid;
-    border-color: transparent lightyellow transparent transparent;
+  right: 0px;
+  bottom: -20px;
+  border: 22px solid;
+  border-color: transparent lightyellow transparent transparent;
 }
+
 #welcome-text {
   font-size: 1em;
   padding: 3% 25% 3% 25%;
   text-align: center;
 }
+
 #jungle-button {
   height: 15%;
   width: 15%;
@@ -202,6 +202,7 @@ body {
   position: relative;
   right: 45%;
 }
+
 #sea-button {
   height: 15%;
   width: 15%;
@@ -209,6 +210,7 @@ body {
   position: relative;
   margin-left: 120%;
 }
+
 #animal-info {
   font-family: 'Handlee', cursive;
   font-size: 25px;
@@ -216,4 +218,25 @@ body {
 #quiz-button {
   position: fixed;
   bottom: 0;
+}
+
+#home-button {
+  height: 10%;
+  width: 8%;
+  position: fixed;
+  right: 90%;
+  bottom:88%;
+  background-image: url('./images/home.png');
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#home-button:hover {
+  opacity: 0.5;
+}
+
+#home-button:active {
+  /*background-color: #3e8e41;*/
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

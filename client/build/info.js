@@ -87,6 +87,9 @@ var bookRunner = function (habitat) {
 // new code
 var htmlSetup = function (animalData) {
   var backgroundImageWrapper = document.getElementById('background-image-wrapper');
+  var homeButton = document.createElement('div');
+  homeButton.id = "home-button";
+  backgroundImageWrapper.appendChild(homeButton);
   var nextButtonDiv = document.createElement('div');
   nextButtonDiv.id = "next-page-button";
   nextButtonDiv.className = "pulse";
