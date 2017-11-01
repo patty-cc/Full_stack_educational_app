@@ -10,6 +10,7 @@ var createJungleButton = function(){
   seaDiv.appendChild(seaBtn);
   seaDiv.addEventListener("click", function() {
     makeRequest('http://localhost:3000/api/animals/jungle', renderSeaInfo);
+    createQuizButton("Underwater");
   })
 
 
@@ -26,7 +27,7 @@ var createJungleButton = function(){
   jungleDiv.appendChild(jungleBtn);
   jungleBtn.addEventListener("click", function() {
     makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo);
-    createQuizButton();
+    createQuizButton("Jungle");
       var textBox = document.getElementById("text-box2");
       textBox.id = "text-box";
       var welcomeText = document.getElementById("welcome-text");

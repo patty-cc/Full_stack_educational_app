@@ -24,7 +24,7 @@ var renderSeaInfo = function(data){
   seaAnimals = []
    for(animal of data){
      console.log(animal);
-     if (animal.area === "Sea"){
+     if (animal.area === "Underwater"){
        seaAnimals.push(animal)
       }
    }
@@ -197,7 +197,7 @@ for (animal of animalData) {
       backDiv.appendChild(p)
 }
 
-var createQuizButton = function() {
+var createQuizButton = function(habitat) {
   var quizButton = document.createElement('button');
   // quizButton.id = 'quiz-button'
   quizButton.setAttribute("class","quiz-button");
@@ -206,7 +206,7 @@ var createQuizButton = function() {
   textBox.appendChild(quizButton);
 
   quizButton.addEventListener("click", function() {
-    initializeJungleQuiz();
+    initializeQuizSection(habitat);
   });
 
 }

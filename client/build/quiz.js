@@ -1,11 +1,11 @@
-var jungleSets;
-var jungleSetIndexes = [];
+var habitatSets;
+var habitatSetIndexes = [];
 
-var displayWelcomeText = function() {
+var displayWelcomeText = function(habitat) {
   var textBox = document.getElementById("text-box2");
   var pTag = document.getElementById("welcome-text");
   pTag.innerHTML = "";
-  pTag.innerText = "Welcome to the Jungle Quiz!";
+  pTag.innerText = "Welcome to the "+ habitat + " Quiz!";
 }
 
 var createNextButton = function() {
@@ -19,7 +19,7 @@ var createNextButton = function() {
     nextButton.addEventListener("click", function(){
       var textBoxText = document.getElementById("welcome-text");
       textBoxText.innerText = "Choose one of the answers above!";
-      initializeQuiz(jungleSetIndexes);
+      initializeQuiz(habitatSetIndexes);
     });
   }
 }
@@ -33,7 +33,7 @@ var incorrectAnswerClicked = function(){
 var correctAnswerClicked = function(){
   var textBoxText = document.getElementById("welcome-text");
   textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
-  if(jungleSetIndexes.length > 0){
+  if(habitatSetIndexes.length > 0){
     createNextButton();
   } else {
     var nextButton = document.getElementById("quiz-next-button");
@@ -52,17 +52,18 @@ var initializeQuiz = function(indexesArray) {
   // get random index to select a random set from the question-answers array
   var index = getRandomArrayIndex(indexesArray);
   console.log("MAIN INDEX: ", index);
-  console.log("ALL INDEXES: ", jungleSetIndexes);
+  console.log("ALL INDEXES: ", habitatSetIndexes);
 // create h1 element displaying the question from the selected set
   var journalDiv = document.getElementById("quiz-journal-box");
   var questionText = document.createElement("h1");
-  questionText.innerText = jungleSets[index].question;
+  console.log("habitatSets[index] ", habitatSets[index]);
+  questionText.innerText = habitatSets[index].question;
   journalDiv.appendChild(questionText);
 
 // display image from the selected set
   var pic = document.createElement("img");
   pic.setAttribute("id", "quiz-img");
-  pic.src = jungleSets[index].img;
+  pic.src = habitatSets[index].img;
   journalDiv.appendChild(pic);
 
 // create a div for the three answers to be displayed
@@ -86,41 +87,41 @@ var initializeQuiz = function(indexesArray) {
 // create buttons with 3 questions in random order using the indexes that have just been generated
   var answer1 = document.createElement("button");
   answer1.setAttribute("class", "quiz-button");
-  answer1.innerText = jungleSets[index].answers[answer1Index].text;
+  answer1.innerText = habitatSets[index].answers[answer1Index].text;
   answersWrapper.appendChild(answer1);
 
   var answer2 = document.createElement("button");
   answer2.setAttribute("class", "quiz-button");
-  answer2.innerText = jungleSets[index].answers[answer2Index].text;
+  answer2.innerText = habitatSets[index].answers[answer2Index].text;
   answersWrapper.appendChild(answer2);
 
   var answer3 = document.createElement("button");
   answer3.setAttribute("class", "quiz-button");
-  answer3.innerText = jungleSets[index].answers[answer3Index].text;
+  answer3.innerText = habitatSets[index].answers[answer3Index].text;
   answersWrapper.appendChild(answer3);
 
 // add appropriate event listeners based on the correctness of the answer
-  if (jungleSets[index].answers[answer1Index].correct){
+  if (habitatSets[index].answers[answer1Index].correct){
     answer1.addEventListener("click", correctAnswerClicked);
   } else {
     answer1.addEventListener("click", incorrectAnswerClicked);
   }
 
-  if (jungleSets[index].answers[answer2Index].correct){
+  if (habitatSets[index].answers[answer2Index].correct){
     answer2.addEventListener("click", correctAnswerClicked);
   } else {
     answer2.addEventListener("click", incorrectAnswerClicked);
   }
 
-  if (jungleSets[index].answers[answer3Index].correct){
+  if (habitatSets[index].answers[answer3Index].correct){
     answer3.addEventListener("click", correctAnswerClicked);
   } else {
     answer3.addEventListener("click", incorrectAnswerClicked);
   }
 
-  jungleSets.splice(index, 1);
-  jungleSetIndexes.splice(index, 1);
-  console.log("SPLICED INDEXES: ", jungleSetIndexes);
+  habitatSets.splice(index, 1);
+  habitatSetIndexes.splice(index, 1);
+  console.log("SPLICED INDEXES: ", habitatSetIndexes);
 }
 
 var displayHomeButton = function(){
@@ -146,40 +147,38 @@ var getRandomArrayIndex = function(array){
 }
 
 var getIndexes = function(){
-  for (var i = 0; i < jungleSets.length; i++){
-    jungleSetIndexes.push(i);
+  for (var i = 0; i < habitatSets.length; i++){
+    habitatSetIndexes.push(i);
   }
-  console.log("indexes: ", jungleSetIndexes);
-  initializeQuiz(jungleSetIndexes);
+  console.log("indexes: ", habitatSetIndexes);
+  initializeQuiz(habitatSetIndexes);
 }
 
-var getJungleSets = function(data){
-  jungleSets = data.filter(function(set){
-    return set.habitat === "Jungle";
+var getSetsByHabitat = function(data, habitat){
+  habitatSets = data.filter(function(set){
+    return set.habitat === habitat;
   });
-  console.log("jungleSets: ", jungleSets);
+  console.log("habitatSets: ", habitatSets);
   getIndexes();
 }
 
-var makeRequest = function(url, callback) {
+var makeQuizRequest = function(url, callback, habitat) {
   var request = new XMLHttpRequest();
     request.open( "GET", url);
     request.addEventListener( "load", function() {
       var data = JSON.parse(this.responseText);
-      console.log(data);
+      console.log("Quiz makeRequest data: ", data);
       console.log("request is made")
-      callback(data);
+      callback(data, habitat);
   });
   request.send();
 }
 
-var initializeJungleQuiz = function() {
+var initializeQuizSection = function(habitat) {
   var main = document.getElementById("background-image-wrapper");
   main.innerHTML = "";
-  console.log("initializeJungleQuiz gets called");
-  displayWelcomeText();
+  console.log("initializeQuiz gets called");
+  displayWelcomeText(habitat);
   displayJournal();
-  makeRequest("http://localhost:3000/api/quiz", getJungleSets);
+  makeQuizRequest("http://localhost:3000/api/quiz", getSetsByHabitat, habitat);
 }
-
-// window.addEventListener("load", initialize);
