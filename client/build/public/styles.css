@@ -14,11 +14,11 @@ body {
   top: 0;
   width: 100%;
   height: 75%;
-  background-color: #84b4e4;
   justify-content: center;
   align-items:center;
-  background: url("./images/world3.png");
-  background-size: contain;
+  background: url("./images/worldmap3.png");
+  background-color: #84b4e4;
+  background-size: cover;
   background-repeat:   no-repeat;
   background-position: center center;
 }
@@ -35,14 +35,14 @@ body {
   background: url(./images/oldpage.png);
     height: 429px;
     width: 626px;
-    background-size: 625px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
 #quiz-journal-box h1 {
   align-self: center;
-  margin-top: 4%;
+  margin-top: 7%;
   margin-left: 5%;
   text-align: center;
 }
@@ -198,12 +198,16 @@ body {
 #jungle-button {
   height: 15%;
   width: 15%;
-  margin-top: 22%;
+  margin-top: 27%;
+  position: relative;
+  right: 45%;
 }
 #sea-button {
   height: 15%;
   width: 15%;
-  margin-left: 22%;
+  margin-top: 30%;
+  position: relative;
+  margin-left: 120%;
 }
 #animal-info {
   font-family: 'Handlee', cursive;
