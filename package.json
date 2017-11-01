@@ -2,7 +2,7 @@
   "name": "Full_stack_educational_app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "welcome.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
