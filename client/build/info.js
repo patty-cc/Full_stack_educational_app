@@ -90,6 +90,10 @@ var htmlSetup = function (animalData) {
   var homeButton = document.createElement('div');
   homeButton.id = "home-button";
   backgroundImageWrapper.appendChild(homeButton);
+  homeButton.addEventListener("click", function(){
+    location.reload();
+  });
+
   var nextButtonDiv = document.createElement('div');
   nextButtonDiv.id = "next-page-button";
   nextButtonDiv.className = "pulse";

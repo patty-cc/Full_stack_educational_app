@@ -1,6 +1,9 @@
 var createHabitatButtons = function(){
   // creates UNDERWATER button on map
       var main = document.getElementById("background-image-wrapper");
+      main.innerHTML = "";
+    //  main.id = "background-image-wrapper";
+      main.style.backgroundImage = 'url(./public/images/worldmap3.png)';
       var seaDiv = document.createElement("div");
       var seaBtn = document.createElement("img");
       seaDiv.setAttribute("id", "sea");

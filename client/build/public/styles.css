@@ -18,7 +18,7 @@ body {
   height: 75%;
   justify-content: center;
   align-items:center;
-  background: url("./images/worldmap3.png");
+  background-image: url("./images/worldmap3.png");
   background-color: #84b4e4;
   background-size: cover;
   background-repeat:   no-repeat;

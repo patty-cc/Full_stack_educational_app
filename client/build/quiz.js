@@ -132,6 +132,9 @@ var displayHomeButton = function(){
   var homeButton = document.createElement('div');
   homeButton.id = "home-button";
   backgroundImageWrapper.appendChild(homeButton);
+  homeButton.addEventListener("click", function(){
+    location.reload();
+  });
 }
 
 var displayJournal = function() {
