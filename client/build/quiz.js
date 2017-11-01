@@ -31,22 +31,14 @@ var incorrectAnswerClicked = function(){
 }
 
 var correctAnswerClicked = function(){
+
   var textBoxText = document.getElementById("welcome-text");
   textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
   if(habitatSetIndexes.length > 0){
     createNextButton();
+    textBoxText.innerText = "Correct! Press NEXT to move to the next question!";
   } else {
-    // console.log("hey")
-    // var imgWrapper = document.querySelector("#quiz-background-image-wrapper")
-    // var nextButton = document.querySelector("#next-page-button");
-    // imgWrapper.removeChild(nextButton)
-
-
-    // while()
-
-    // nextButton.innerHTML = "";
-    // nextButton.style.backgroundImage = "";
-    // textBoxText.innerText = "You've finished the quiz! Press HOME to get back to the map view!";
+    textBoxText.innerText = "Correct! Press HOME to get back to the map view!";
   }
 }
 
