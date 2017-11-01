@@ -138,3 +138,20 @@ and (orientation : portrait) {
 #infoHeading {
 text-decoration: underline;
 }
+
+#next-page-button {
+  height: 100%;
+  width: 10%;
+  background-color: white;
+  opacity: 0.2;
+  position: fixed;
+  left: 90%;
+}
+#back-page-button {
+  height: 100%;
+  width: 10%;
+  background-color: white;
+  opacity: 0.2;
+  position: fixed;
+  right: 90%;
+}

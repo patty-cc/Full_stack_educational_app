@@ -64,22 +64,6 @@ var renderJungleInfo = function(data){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var bookRunner = function () {
   var page = 0;
   var forwards = true;
@@ -96,20 +80,40 @@ var bookRunner = function () {
     });
   };
 
-  document.querySelector(".book").addEventListener("click", function(event) {
-    if (event.target.className.includes("front")) {
+  var getNextbutton = document.getElementById("next-page-button")
+  getNextbutton.addEventListener("click", function(event) {
+  if (page === 4) {
+      console.log("GO TO QUIZ");
+      initializeJungleQuiz();
+
+  } else {
       page++;
-      updatePages();
-    } else {
-      page--;
+      console.log("up page", page);
       updatePages();
     }
-  });
+  })
+
+
+  var getBackButton = document.getElementById("back-page-button")
+  getBackButton.addEventListener("click", function(event) {
+    page--
+    console.log("down page", page);
+    updatePages()
+  })
+
 }
 
 // new code
 var htmlSetup = function (animalData) {
   var backgroundImageWrapper = document.getElementById('background-image-wrapper')
+
+  var nextButtonDiv = document.createElement('div')
+  nextButtonDiv.id = "next-page-button"
+  backgroundImageWrapper.appendChild(nextButtonDiv)
+
+  var backButtonDiv = document.createElement('div')
+  backButtonDiv.id = "back-page-button"
+  backgroundImageWrapper.appendChild(backButtonDiv)
 
   var sceneDiv = document.createElement('div')
   sceneDiv.className = "scene"
