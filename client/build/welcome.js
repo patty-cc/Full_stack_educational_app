@@ -13,7 +13,22 @@ var createHabitatButtons = function(){
       seaDiv.appendChild(seaBtn);
       seaDiv.addEventListener("click", function() {
         makeRequest('http://localhost:3000/api/animals/jungle', renderSeaInfo);
-        createQuizButton("Underwater");
+        // createQuizButton("Underwater");
+        var textBox = document.getElementById("text-box2");
+        textBox.id = "text-box";
+
+        var welcomeText = document.getElementById("welcome-text");
+        welcomeText.innerHTML = "";
+
+        printText("welcome-text", "Under the sea!", 60);
+
+        setTimeout(function() {
+          var welcomeText = document.getElementById("welcome-text");
+          welcomeText.innerHTML = "";
+          var textBox = document.getElementById("text-box");
+          textBox.id = "text-box2";
+          printText("welcome-text", "I hope there's no jaguars here.", 60)
+        }, 2500);
       });
 
       var jungleDiv = document.createElement("div");
@@ -25,12 +40,16 @@ var createHabitatButtons = function(){
       jungleDiv.appendChild(jungleBtn);
       jungleBtn.addEventListener("click", function() {
         makeRequest('http://localhost:3000/api/animals/jungle', renderJungleInfo);
-        createQuizButton("Jungle");
+        // createQuizButton("Jungle");
+
           var textBox = document.getElementById("text-box2");
           textBox.id = "text-box";
+
           var welcomeText = document.getElementById("welcome-text");
           welcomeText.innerHTML = "";
+
           printText("welcome-text", "Welcome to the Jungle!", 60);
+
           setTimeout(function() {
             var welcomeText = document.getElementById("welcome-text");
             welcomeText.innerHTML = "";

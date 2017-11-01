@@ -29,6 +29,13 @@ var renderSeaInfo = function(data){
 
   var background = document.getElementById("background-image-wrapper");
   background.style.background = "url(./public/images/seaBackground.jpg)";
+  setTimeout(function() {
+    var welcomeText = document.getElementById("welcome-text");
+    welcomeText.innerHTML = "";
+    var textBox = document.getElementById("text-box2");
+    textBox.id = "text-box";
+    printText("welcome-text", "Luckily we can hold our breath!", 60)
+  }, 9000);
   htmlSetup(seaAnimals);
   bookRunner("Underwater");
 }
@@ -49,7 +56,7 @@ var renderJungleInfo = function(data){
     var textBox = document.getElementById("text-box2");
     textBox.id = "text-box";
     printText("welcome-text", "Wow, we have so many animals in our book", 60)
-  }, 7000);
+  }, 9000);
   htmlSetup(jungleAnimals)
   bookRunner("Jungle")
 }
