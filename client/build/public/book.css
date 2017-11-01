@@ -1,0 +1,140 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: black;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+}
+.scene {
+    width: 45%;
+    height: 90%;
+    margin: 5% 5% 5% 50%;
+  perspective: 1000px;
+}
+.book {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  transform-style: preserve-3d;
+  font-family: 'Handlee', cursive;
+
+}
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 80%;
+  height: 90%;
+  transition: 1.5s transform;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  background-image: url('./images/paper.jpg');
+  background-size: cover;
+  /*background: linear-gradient(to bottom right, #fff, #ccc);*/
+
+}
+.back {
+  transform: rotateY(180deg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 0.5px dashed grey;
+
+}
+
+.front {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.page.active {
+  z-index: 1;
+}
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+/*p {
+  margin: 0 0 0.1em;
+  text-indent: 1em;
+}*/
+/*.qr {
+  margin: 50px auto;
+  max-width: 50%;
+}
+.qr img {
+  display: block;
+}*/
+/* iPads (portrait) ----------- */
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .scene {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}*/
+
+
+
+#animal-img {
+  height: 100%;
+  width: 70%;
+  margin: auto;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back p {
+  margin: auto;
+  justify-content: center;
+  bottom: 28%;
+  position: relative;
+  font-size: 1.7em;
+}
+
+.cover {
+  background-image: url('./images/book.jpg');
+  background-size: 100% 100%;
+  border-left: none;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.front p {
+  padding: 5px 20px 10px 20px;
+  font-size: 1.3em;
+
+  /*background-color: #84b4e4;*/
+  justify-content: center;
+  align-items:center;
+  /*background: url("./images/world3.png");*/
+  background-repeat:   no-repeat;
+  /*background-position: center center;*/
+}
+
+
+
+#infoHeading {
+text-decoration: underline;
+}

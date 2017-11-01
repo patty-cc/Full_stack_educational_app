@@ -7,7 +7,7 @@ db.facts.insert([
     area: "Jungle",
     name: "Macaw",
     type: "Bird",
-    img: "http://www.worldatlas.com/r/w728-h425-c728x425/upload/5e/d7/7c/shutterstock-153175595.jpg",
+    img: "/public/images/Macaw.png",
     funFact: "They can live up to 80 years.",
     group: "Flock"
   },
@@ -15,7 +15,7 @@ db.facts.insert([
     area: "Jungle",
     name: "Jaguar",
     type: "Mammal",
-    img: "http://www.worldatlas.com/r/w728-h425-c728x425/upload/c4/60/01/shutterstock-78913234.jpg",
+    img: "/public/images/tree-jaguar.png",
     funFact: "Like the tiger, jaguars enjoy water and are good at swimming.",
     group: "Jamboree"
   },
@@ -23,7 +23,7 @@ db.facts.insert([
     area: "Jungle",
     name: "Poison Dart Frog",
     type: "Amphibian",
-    img: "http://www.worldatlas.com/r/w728-h425-c728x425/upload/cb/3b/40/shutterstock-424020241.jpg",
+    img: "/public/images/Dart-frog.png",
     funFact: "After the tadpoles have hatched, one of the parents will carry them on their back.",
     group: "Army"
   },
@@ -31,7 +31,7 @@ db.facts.insert([
     area: "Underwater",
     name: "Jellyfish",
     type: "Invertebrates",
-    img: "?",
+    img: "/public/images/jellyfishpolaroid.png",
     funFact: "Jellyfish have no brain but some kinds have eyes.",
     group: "Smack"
   },
@@ -39,7 +39,7 @@ db.facts.insert([
     area: "Underwater",
     name: "Pufferfish",
     type: "Fish",
-    img: "?",
+    img: "/public/images/blowfishpolaroid.png",
     funFact: "Pufferfish can change colour based on their environment.",
     group: "School"
   },
@@ -47,7 +47,7 @@ db.facts.insert([
     area: "Underwater",
     name: "Dolphin",
     type: "Mammal",
-    img: "?",
+    img: "/public/images/dolphinpolaroid.png",
     funFact: "Dolphins use a blowhole on top of their heads to breathe.",
     group: "Pod"
   }
@@ -77,18 +77,18 @@ db.quiz.insert([
     habitat: "Underwater",
     question: "What do you call a group of pufferfish?",
     answers: [{text: "School", correct: true}, {text: "Pod", correct: false}, {text: "Smack", correct: false}],
-    img: '?'
+    img: '/public/images/pufferedit.png'
   },
   {
     habitat: "Underwater",
     question: "Which animal doesn't have a brain?",
     answers: [{text: "Jellyfish", correct: true}, {text: "Dolphin", correct: false}, {text: "Pufferfish", correct: false}],
-    img: '?'
+    img: '/public/images/jellyFishEdit.png'
   },
   {
     habitat: "Underwater",
     question: "What does a dolphin use to breathe?",
-    answers: [{text: "a hole in their head", correct: true}, {text: "nose", correct: false}, {text: "mouth", correct: false}],
-    img: '?'
+    answers: [{text: "A hole in their head", correct: true}, {text: "Nose", correct: false}, {text: "Mouth", correct: false}],
+    img: '/public/images/dolphinquizimage.png'
   }
 ])
