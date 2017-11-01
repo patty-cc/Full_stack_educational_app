@@ -2,15 +2,12 @@
   margin: 0px;
   padding:0px;
 }
-
 body {
   background-color: #84b4e4;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-
 }
-
 #background-image-wrapper {
   display: flex;
   position: fixed;
@@ -25,7 +22,6 @@ body {
   background-repeat:   no-repeat;
   background-position: center center;
 }
-
 #quiz-background-image-wrapper {
   display: flex;
   position: fixed;
@@ -35,7 +31,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 #quiz-journal-box {
   background: url(./images/oldpage.png);
     height: 429px;
@@ -45,33 +40,28 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 #quiz-journal-box h1 {
   align-self: center;
   margin-top: 4%;
   margin-left: 5%;
   text-align: center;
 }
-
 #quiz-img {
   max-height: 200px;
   max-width: 400px;
   align-self: center;
   margin-top: 6%;
 }
-
 #quiz-answers-wrapper {
   padding-top: 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-
 #quiz-answers-wrapper p {
   margin: 3%;
   font-size: 2em;
 }
-
 /*#quiz-text-box-buttons-wrapper {
   padding-top: 5%;
   width: 100%;
@@ -79,40 +69,33 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
 }*/
-
 #quiz-next-button {
   /*margin-left: 10%;*/
   /*padding: 6px;*/
   /*align-self: flex-end;*/
 }
-
 #quiz-home-button {
   /*padding: 6px;*/
   /*text-align: center;*/
   /*align-self: center;*/
 }
-
 .quiz-button {
   background-color: Transparent;
   border: none;
   font-size: 20px;
   /*margin: auto;*/
 }
-
 .quiz-button:hover {
   text-decoration: underline;
 }
-
 .quiz-button:focus {
   outline: none;
 }
-
 #animal-picture-wrapper {
   /*height: 200px;
   width: 200px;
   background: url('./images/macaw.jpg');*/
 }
-
 #text-box-wrapper {
   display: flex;
   background-color: wheat;
@@ -123,29 +106,24 @@ body {
   border: 10px double black;
   border-right:10px double black;
 }
-
 .boy-explorer {
   /*background-color: dodgerblue;*/
   height: 100%;
   flex: 1;
   text-align: center;
 }
-
 #explorer1 {
   padding-left: 10%;
 }
-
 .girl-explorer {
   /*background-color: hotpink;*/
   height: 100%;
   flex: 1;
   text-align: center;
 }
-
 #explorer2 {
   padding-left: 10%;
 }
-
 #text-box {
   margin: 40px;
   display: inline-block;
@@ -156,32 +134,30 @@ body {
   border: 8px solid #666;
   border-radius: 30px;
 }
-
 #text-box:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: -8px;
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -8px;
   right: auto;
   top: auto;
-	bottom: -40px;
-	border: 32px solid;
-	border-color: transparent transparent transparent #666;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent transparent transparent #666;
 }
 #text-box:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: 0px;
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
   right: auto;
   top: auto;
-	bottom: -20px;
-	border: 22px solid;
-	border-color: transparent transparent transparent lightyellow;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent lightyellow;
 }
-
 #text-box2 {
   margin: 20px;
   display: flex;
@@ -192,119 +168,48 @@ body {
   border: 8px solid #666;
   border-radius: 30px;
 }
-
 #text-box2:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
   left: auto;
-	right: -8px;
-	bottom: -40px;
-	border: 32px solid;
-	border-color: transparent #666 transparent transparent;
+    right: -8px;
+    bottom: -40px;
+    border: 32px solid;
+    border-color: transparent #666 transparent transparent;
 }
 #text-box2:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
   left: auto;
-	right: 0px;
-	bottom: -20px;
-	border: 22px solid;
-	border-color: transparent lightyellow transparent transparent;
+    right: 0px;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent lightyellow transparent transparent;
 }
 #welcome-text {
   font-size: 1em;
   padding: 3% 25% 3% 25%;
   text-align: center;
 }
-
 #jungle-button {
   height: 15%;
   width: 15%;
   margin-top: 22%;
 }
-
 #sea-button {
   height: 15%;
   width: 15%;
   margin-left: 22%;
 }
-
-
-
-/* DAVE CSS */
-
-/*#journal-image {
-
-  background-image: url('./images/journal.png');
-  background-size: contain;
-  background-position: center;
-  position: fixed;
-
-  height: 65%;
-  width: 75%;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: fill;
-}*/
-
-
-/*#animal-picture-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex:1;
-  position: relative;
-  padding-left: 15%;
-  height: 90%;
-  width: 100%;
-}*/
-/*
-#animal-info {
-  flex:1 ;
-  height:100%;
-  width:60%;
-  margin: 10px 10px;
-  text-align:left;
-  padding: 20px 50px 10px 20px;
-
-  background-color: #84b4e4;
-  justify-content: center;
-  align-items:center;
-  background: url("./images/world3.png");
-  background-size: contain;
-  background-repeat:   no-repeat;
-  background-position: center center;
-}*/
-
-/*#animalImg{
-  position: relative;
-  max-height: 80%;
-  max-width: 80%;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}*/
-/*
-#name{
-  position: relative;
-  bottom: 100px;
-  text-align: center;
-
-}
-
 #animal-info {
   font-family: 'Handlee', cursive;
   font-size: 25px;
-
 }
-
 #quiz-button {
   position: fixed;
   bottom: 0;
-}*/
+}

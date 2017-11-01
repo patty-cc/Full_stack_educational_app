@@ -10,13 +10,13 @@ var displayWelcomeText = function(habitat) {
 
 var createNextButton = function() {
   if(!document.getElementById("quiz-next-button")) {
-    var buttonsWrapper = document.getElementById("text-box-wrapper");
-    var nextButton = document.createElement("button");
-    nextButton.setAttribute("id", "quiz-next-button");
-    nextButton.setAttribute("class", "quiz-button");
-    nextButton.innerText = "NEXT";
-    buttonsWrapper.appendChild(nextButton);
-    nextButton.addEventListener("click", function(){
+    var backgroundImageWrapper = document.getElementById('quiz-background-image-wrapper')
+    var nextButtonDiv = document.createElement('div')
+    nextButtonDiv.id = "next-page-button"
+    nextButtonDiv.className = "pulse"
+    nextButtonDiv.style.backgroundImage = "url(./public/images/arrows.png)";
+    backgroundImageWrapper.appendChild(nextButtonDiv)
+    nextButtonDiv.addEventListener("click", function(){
       var textBoxText = document.getElementById("welcome-text");
       textBoxText.innerText = "Choose one of the answers above!";
       initializeQuiz(habitatSetIndexes);
@@ -36,9 +36,17 @@ var correctAnswerClicked = function(){
   if(habitatSetIndexes.length > 0){
     createNextButton();
   } else {
-    var nextButton = document.getElementById("quiz-next-button");
-    nextButton.innerHTML = "";
-    textBoxText.innerText = "You've finished the quiz! Press HOME to get back to the map view!";
+    // console.log("hey")
+    // var imgWrapper = document.querySelector("#quiz-background-image-wrapper")
+    // var nextButton = document.querySelector("#next-page-button");
+    // imgWrapper.removeChild(nextButton)
+
+
+    // while()
+
+    // nextButton.innerHTML = "";
+    // nextButton.style.backgroundImage = "";
+    // textBoxText.innerText = "You've finished the quiz! Press HOME to get back to the map view!";
   }
 }
 
@@ -49,6 +57,9 @@ var cleanQuiz = function(){
 
 var initializeQuiz = function(indexesArray) {
   cleanQuiz();
+  var imgWrapper = document.querySelector("#quiz-background-image-wrapper")
+  var nextButton = document.querySelector("#next-page-button");
+  if(nextButton) imgWrapper.removeChild(nextButton)
   // get random index to select a random set from the question-answers array
   var index = getRandomArrayIndex(indexesArray);
   console.log("MAIN INDEX: ", index);
