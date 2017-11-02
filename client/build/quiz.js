@@ -9,19 +9,35 @@ var displayWelcomeText = function() {
 }
 
 var createNextButton = function() {
-  if(!document.getElementById("quiz-next-button")) {
-    var buttonsWrapper = document.getElementById("text-box-wrapper");
-    var nextButton = document.createElement("button");
-    nextButton.setAttribute("id", "quiz-next-button");
-    nextButton.setAttribute("class", "quiz-button");
-    nextButton.innerText = "NEXT";
-    buttonsWrapper.appendChild(nextButton);
+  console.log("crreate button");
+  if(!document.getElementById("next-page-button")){
+    var backgroundImageWrapper = document.getElementById('background-image-wrapper')
+
+    var nextButtonDiv = document.createElement('div')
+    nextButtonDiv.id = "next-page-button"
+    nextButtonDiv.className = "pulse"
+    backgroundImageWrapper.appendChild(nextButtonDiv)
+
     nextButton.addEventListener("click", function(){
       var textBoxText = document.getElementById("welcome-text");
       textBoxText.innerText = "Choose one of the answers above!";
       initializeQuiz(jungleSetIndexes);
     });
   }
+
+  // if(!document.getElementById("quiz-next-button")) {
+  //   var buttonsWrapper = document.getElementById("text-box-wrapper");
+  //   var nextButton = document.createElement("button");
+  //   nextButton.setAttribute("id", "quiz-next-button");
+  //   nextButton.setAttribute("class", "quiz-button");
+  //   nextButton.innerText = "NEXT";
+  //   buttonsWrapper.appendChild(nextButton);
+  //   nextButton.addEventListener("click", function(){
+  //     var textBoxText = document.getElementById("welcome-text");
+  //     textBoxText.innerText = "Choose one of the answers above!";
+  //     initializeQuiz(jungleSetIndexes);
+  //   });
+  // }
 }
 
 var incorrectAnswerClicked = function(){
@@ -36,7 +52,8 @@ var correctAnswerClicked = function(){
   if(jungleSetIndexes.length > 0){
     createNextButton();
   } else {
-    var nextButton = document.getElementById("quiz-next-button");
+    // var nextButton = document.getElementById("quiz-next-button");
+    var nextButton = document.getElementById("next-page-button");
     nextButton.innerHTML = "";
     textBoxText.innerText = "You've finished the quiz! Press HOME to get back to the map view!";
   }

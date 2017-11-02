@@ -235,69 +235,6 @@ body {
 
 
 
-/* DAVE CSS */
-
-/*#journal-image {
-
-  background-image: url('./images/journal.png');
-  background-size: contain;
-  background-position: center;
-  position: fixed;
-
-  height: 65%;
-  width: 75%;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: fill;
-}*/
-
-
-/*#animal-picture-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex:1;
-  position: relative;
-  padding-left: 15%;
-  height: 90%;
-  width: 100%;
-}*/
-/*
-#animal-info {
-  flex:1 ;
-  height:100%;
-  width:60%;
-  margin: 10px 10px;
-  text-align:left;
-  padding: 20px 50px 10px 20px;
-
-  background-color: #84b4e4;
-  justify-content: center;
-  align-items:center;
-  background: url("./images/world3.png");
-  background-size: contain;
-  background-repeat:   no-repeat;
-  background-position: center center;
-}*/
-
-/*#animalImg{
-  position: relative;
-  max-height: 80%;
-  max-width: 80%;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}*/
-/*
-#name{
-  position: relative;
-  bottom: 100px;
-  text-align: center;
-
-}
-
 #animal-info {
   font-family: 'Handlee', cursive;
   font-size: 25px;
@@ -307,4 +244,25 @@ body {
 #quiz-button {
   position: fixed;
   bottom: 0;
-}*/
+}
+
+#home-button {
+  height: 10%;
+  width: 8%;
+  position: fixed;
+  right: 90%;
+  bottom:88%;
+  background-image: url('./images/home.png');
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#home-button:hover {
+  opacity: 0.5;
+}
+
+#home-button:active {
+  /*background-color: #3e8e41;*/
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
